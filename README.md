@@ -1,6 +1,6 @@
 # MAUS: A Dataset for Mental Workload Assessment Using Wearable Sensor - Baseline system
 
-![alt text](https://github.com/rickwu11/MAUS_dataset_baseline_system/blob/9e6e510effb8a70be6cb12babdd0ab3c0f77c334/figures/system_flow.jpg)
+![alt text](https://github.com/rickwu11/MAUS_dataset_baseline_system/blob/ebc016cd26306545625847f9e720433e8e8c58aa/figures/system_flow.jpg)
 
 ## Getting started
 To start working on this assignment, you should clone this repository into your local machine by using the following command.
