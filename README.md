@@ -7,5 +7,5 @@ To start working on this assignment, you should clone this repository into your 
     git clone https://github.com/rickwu11/MAUS_dataset_baseline_system.git
 
 # Dataset
-The MAUS dataset can be downloaded from: http://ieee-dataport.org/4216 
+The MAUS dataset can be downloaded from: http://ieee-dataport.org/4216.
 Extract the .zip file under this folder.
