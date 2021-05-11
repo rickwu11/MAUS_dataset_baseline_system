@@ -7,6 +7,7 @@
 import pyhrv
 import pyhrv.time_domain as td
 import pyhrv.frequency_domain as fd
+import pyhrv.nonlinear as nl
 
 def hrv_feature(signal, sampling_rate):
     sig_len = len(signal)
@@ -48,11 +49,26 @@ def hrv_feature(signal, sampling_rate):
     
     lomb_LF_HF =  lomb_result['lomb_ratio']
     
+    # nonlinear
+    nonlinear_results = nl.nonlinear(nni = signal, sampling_rate = sampling_rate, show = False )
+    sd1 = nonlinear_results['sd1']
+    sd2 = nonlinear_results['sd2']
+    sd_ratio = nonlinear_results['sd_ratio']
+    
+    sampen = nonlinear_results['sampen']
+    # dfa_alpha1 = nonlinear_results['dfa_alpha1']
+    # dfa_alpha2 = nonlinear_results['dfa_alpha2']
     
     
+    
+    # return SDNN, nn50, pnn50, rmssd, sdsd, tinn, tri_index, \
+    #             welch_TF, welch_VLF, welch_LF, welch_HF, welch_LF_n, welch_HF_n, welch_LF_HF, \
+    #             lomb_TF, lomb_VLF, lomb_LF, lomb_HF, lomb_LF_n, lomb_HF_n, lomb_LF_HF, \
+    #             sd1, sd2, sd_ratio, sampen, dfa_alpha1, dfa_alpha2
     return SDNN, nn50, pnn50, rmssd, sdsd, tinn, tri_index, \
-                welch_TF, welch_LF, welch_HF, welch_LF_n, welch_HF_n, welch_LF_HF, \
-                lomb_TF, lomb_LF, lomb_HF, lomb_LF_n, lomb_HF_n, lomb_LF_HF
+                welch_TF, welch_VLF, welch_LF, welch_HF, welch_LF_n, welch_HF_n, welch_LF_HF, \
+                lomb_TF, lomb_VLF, lomb_LF, lomb_HF, lomb_LF_n, lomb_HF_n, lomb_LF_HF, \
+                sd1, sd2, sd_ratio, sampen
 
 # if __name__ == "__main__":
 #     pass        
