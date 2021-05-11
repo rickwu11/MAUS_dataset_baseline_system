@@ -9,19 +9,15 @@ import math
 from scipy import stats
 import matplotlib.pyplot as plt
 
-from sklearn.model_selection import KFold
-from sklearn.metrics import f1_score
-from sklearn.metrics import auc, accuracy_score, confusion_matrix, mean_squared_error
-from sklearn.model_selection import cross_val_score, GridSearchCV, KFold, RandomizedSearchCV, train_test_split
+from sklearn.metrics import f1_score, accuracy_score, confusion_matrix
 from sklearn.utils import shuffle
 from sklearn.svm import SVC
 from sklearn.svm import LinearSVC
+from sklearn.model_selection import KFold
 from sklearn.pipeline import Pipeline
-from sklearn.model_selection import GridSearchCV
 from sklearn.preprocessing import StandardScaler
 import random
 random.seed(9)
-from sklearn.utils import shuffle
 
 from HRV_feature_extraction import feat_read_from_pkl, feat_normalization
 
@@ -287,7 +283,7 @@ if __name__ == "__main__":
     label[label == 2] = 1
     label[label == 3] = 1  
     if args.mode == 'LOSO':
-        classification_LOSO(feat_inf_e_norm[:,:], feat_inf_p_norm[:,:], feat_pix_norm[:,:], label, obj_position)
+        classification_LOSO(feat_inf_e_norm[:,:13], feat_inf_p_norm[:,:13], feat_pix_norm[:,:13], label, obj_position)
     else:
-        classification_Mixed(feat_inf_e_norm[:,:], feat_inf_p_norm[:,:], feat_pix_norm[:,:], label, obj_position)
+        classification_Mixed(feat_inf_e_norm[:,:13], feat_inf_p_norm[:,:13], feat_pix_norm[:,:13], label, obj_position)
 

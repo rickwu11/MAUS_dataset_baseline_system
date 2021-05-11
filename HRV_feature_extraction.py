@@ -3,6 +3,7 @@
     File Description: Data preprocessing and feature extraction. Save file to pickle files.
     Date            : 20191002
 """
+from argparse import ArgumentParser
 import os
 import numpy as np
 import scipy
@@ -77,7 +78,7 @@ def feat_normalization(feat_inf_e, feat_inf_p, feat_pix, label, obj_position):
     return feat_inf_e_norm, feat_inf_p_norm, feat_pix_norm
 
 
-def feature_extraction(data_path = "./MAUC/Data/IBI_sequence/"):
+def feature_extraction(data_path = "./MAUS/Data/IBI_sequence/"):
 
     cnt = 0
     feat_inf_e = []
@@ -181,7 +182,7 @@ if __name__ == "__main__":
     #parse argument
     parser = ArgumentParser(
         description='Mental Workload N-backs Dataset -- feature extraction')
-    parser.add_argument('--data', type=str, default='./MAUC/')
+    parser.add_argument('--data', type=str, default='./MAUS/')
     args = parser.parse_args()
 
     feature_extraction(dir_name = os.path.join(args.data,'Data/IBI_sequence/'))
