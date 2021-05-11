@@ -13,6 +13,8 @@ To start working on this assignment, you should clone this repository into your 
 - numpy >= 1.19.5
 - scipy >= 1.5.4
 - pandas >= 1.1.5
+- matplotlib >=3.3.4
+- statsmodels >= 0.12.2
 - pyhrv >= 0.4.0
 - biosppy >= 0.7.0
 - EMD-signal >= 0.2.15
