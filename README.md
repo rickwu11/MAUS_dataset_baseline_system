@@ -1,4 +1,5 @@
-# MAUS_dataset_baseline_system
+# MAUS: A Dataset for Mental Workload
+Assessment Using Wearable Sensor
 
 
 # Usage
