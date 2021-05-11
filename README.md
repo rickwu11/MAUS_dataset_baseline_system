@@ -16,17 +16,17 @@ Extract the .zip file under this folder.
     python3 peak_detection.py
 
 ### HRV features extraction
-    python3 HRV_feature_extraction.py --data ./MAUC/Data/IBI_sequence/
+    python3 HRV_feature_extraction.py --data <IbiDir>
 
---data: IBI sequences path
+`<IbiDir>`: Inter-beat Intervals (IBI) sequence path; Default: ./MAUC/Data/IBI_sequence/
     
 ### Classification
-    python3 classification.py --data ./feature_data --mode LOSO
+    python3 classification.py --data <FeatureDir> --mode <ValidationType>
     
---data: feature data path
+`<FeatureDir>`: feature data path; Default: ./feature_data
 
---mode: validation type
-1. LOSO: leave-one-subject-out cross validation
-2. Mixed: mixed-subject 5-fold cross validation
+`<ValidationType>`: validation type; Default: LOSO
+- LOSO: leave-one-subject-out cross validation
+- Mixed: mixed-subject 5-fold cross validation
     
 
