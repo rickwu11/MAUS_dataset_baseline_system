@@ -78,7 +78,7 @@ def feat_normalization(feat_inf_e, feat_inf_p, feat_pix, label, obj_position):
     return feat_inf_e_norm, feat_inf_p_norm, feat_pix_norm
 
 
-def feature_extraction(data_path = "./MAUS/Data/IBI_sequence/"):
+def feature_extraction(dir_name = "./MAUS/Data/IBI_sequence/"):
 
     cnt = 0
     feat_inf_e = []
@@ -88,13 +88,13 @@ def feature_extraction(data_path = "./MAUS/Data/IBI_sequence/"):
     obj_position = []
 
 
-    for case_file in sorted(os.listdir(data_path)):
+    for case_file in sorted(os.listdir(dir_name)):
         print(case_file)
         for trial in range(18):
             seg_idx = trial%3 + 1
             trial_idx = trial//3 + 1
-            # IBI = pd.read_csv(data_path + case_file + "/trial_" + str(trial) + ".csv")
-            IBI = pd.read_csv(data_path + case_file + "/trial_" + str(trial_idx) + "_" + str(seg_idx) + ".csv")
+            # IBI = pd.read_csv(dir_name + case_file + "/trial_" + str(trial) + ".csv")
+            IBI = pd.read_csv(dir_name + case_file + "/trial_" + str(trial_idx) + "_" + str(seg_idx) + ".csv")
             RRI = np.asarray(IBI)[:,0]
             PPI_inf = np.asarray(IBI)[:,1]
             PPI = np.asarray(IBI)[:,2]
