@@ -24,6 +24,7 @@ Extract the .zip file under this folder.
     python3 classification.py --data ./feature_data --mode LOSO
     
 --data: feature data path
+
 --mode: validation type
 1. LOSO: leave-one-subject-out cross validation
 2. Mixed: mixed-subject 5-fold cross validation
