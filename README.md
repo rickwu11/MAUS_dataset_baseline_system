@@ -5,6 +5,18 @@
 To start working on this assignment, you should clone this repository into your local machine by using the following command.
 
     git clone https://github.com/rickwu11/MAUS_dataset_baseline_system.git
+    
+#### Dependencies
+
+**hrvanalysis** requires the following:
+- Python (>= 3.5)
+- numpy >= 1.19.5
+- scipy >= 1.5.4
+- pandas >= 1.1.5
+- pyhrv >= 0.4.0
+- biosppy >= 0.7.0
+- EMD-signal >= 0.2.15
+
 
 ## Dataset
 The MAUS dataset can be downloaded from: http://ieee-dataport.org/4216.
