@@ -110,7 +110,7 @@ def feature_extraction(dir_name = "./MAUS/Data/IBI_sequence/"):
             SDNN, nn50, pnn50, rmssd, sdsd, tinn, tri_index, \
                     welch_TF, welch_LF, welch_HF, welch_LF_n, welch_HF_n, welch_LF_HF, \
                     lomb_TF, lomb_LF, lomb_HF, lomb_LF_n, lomb_HF_n, lomb_LF_HF, \
-                    sd1, sd2, sd_ratio, sampen, dfa_alpha1, dfa_alpha2  = ultra_feat(RRI, sampling_rate = 256)
+                    sd1, sd2, sd_ratio, sampen, dfa_alpha1, dfa_alpha2  = hrv_feature(RRI, sampling_rate = 256)
 
 
             feat_inf_e.append([SDNN, nn50, pnn50, rmssd, sdsd, tinn, tri_index, \
@@ -119,7 +119,7 @@ def feature_extraction(dir_name = "./MAUS/Data/IBI_sequence/"):
             SDNN, nn50, pnn50, rmssd, sdsd, tinn, tri_index, \
                     welch_TF, welch_LF, welch_HF, welch_LF_n, welch_HF_n, welch_LF_HF, \
                     lomb_TF, lomb_LF, lomb_HF, lomb_LF_n, lomb_HF_n, lomb_LF_HF, \
-                    sd1, sd2, sd_ratio, sampen, dfa_alpha1, dfa_alpha2  = ultra_feat(PPI_inf, sampling_rate = 256)
+                    sd1, sd2, sd_ratio, sampen, dfa_alpha1, dfa_alpha2  = hrv_feature(PPI_inf, sampling_rate = 256)
 
             feat_inf_p.append([SDNN, nn50, pnn50, rmssd, sdsd, tinn, tri_index, \
                     welch_TF, welch_LF, welch_HF, welch_LF_n, welch_HF_n, welch_LF_HF])
@@ -128,7 +128,7 @@ def feature_extraction(dir_name = "./MAUS/Data/IBI_sequence/"):
             SDNN, nn50, pnn50, rmssd, sdsd, tinn, tri_index, \
                     welch_TF, welch_LF, welch_HF, welch_LF_n, welch_HF_n, welch_LF_HF, \
                     lomb_TF, lomb_LF, lomb_HF, lomb_LF_n, lomb_HF_n, lomb_LF_HF, \
-                    sd1, sd2, sd_ratio, sampen, dfa_alpha1, dfa_alpha2  = ultra_feat(PPI, sampling_rate = pix_fs)
+                    sd1, sd2, sd_ratio, sampen, dfa_alpha1, dfa_alpha2  = hrv_feature(PPI, sampling_rate = pix_fs)
 
             feat_pix.append([SDNN, nn50, pnn50, rmssd, sdsd, tinn, tri_index, \
                     welch_TF, welch_LF, welch_HF, welch_LF_n, welch_HF_n, welch_LF_HF])
