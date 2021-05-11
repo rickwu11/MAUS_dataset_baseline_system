@@ -8,7 +8,7 @@ To start working on this assignment, you should clone this repository into your 
     
 #### Dependencies
 
-**hrvanalysis** requires the following:
+**Baseline system of MAUS** requires the following:
 - Python (>= 3.5)
 - numpy >= 1.19.5
 - scipy >= 1.5.4
