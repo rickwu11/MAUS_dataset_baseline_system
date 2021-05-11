@@ -26,7 +26,7 @@ The MAUS dataset can be downloaded from: http://ieee-dataport.org/4216.
 Extract the .zip file under this folder.
 
 ## Baseline system running
-
+The extracted features were provided for classification under the folder: ./feature_data
 ### Peak detection, extract inter-beat intervals (IBI)
     python3 peak_detection.py
 
