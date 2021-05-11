@@ -23,6 +23,8 @@ from src.util.detect_peaks import detect_peaks
 from src.util.signal_alignment import phase_align, chisqr_align
 
 from scipy.ndimage.interpolation import shift
+from warnings import filterwarnings
+filterwarnings('ignore')
 
 
 
