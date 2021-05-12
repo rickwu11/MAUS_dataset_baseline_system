@@ -186,7 +186,7 @@ if __name__ == "__main__":
     #parse argument
     parser = ArgumentParser(
         description='Mental Workload N-backs Dataset -- feature extraction')
-    parser.add_argument('--data', type=str, default='./MAUS/')
+    parser.add_argument('--data', help="IBI sequence datapath", type=str, default='./MAUS/Data/IBI_sequence/')
     args = parser.parse_args()
 
-    feature_extraction(dir_name = os.path.join(args.data,'Data/IBI_sequence/'))
+    feature_extraction(dir_name = args.data)

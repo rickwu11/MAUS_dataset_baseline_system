@@ -272,8 +272,8 @@ if __name__ == "__main__":
     #parse argument
     parser = ArgumentParser(
         description='Mental Workload N-backs Dataset -- classification')
-    parser.add_argument('--data', type=str, default='./feature_data/')
-    parser.add_argument('--mode', type=str, default='LOSO')
+    parser.add_argument('--data', help="extract feature folder", type=str, default='./feature_data/')
+    parser.add_argument('--mode', help="validation type: LOSO or Mixed", type=str, default='LOSO')
     args = parser.parse_args()
 
     feat_inf_e, feat_inf_p, feat_pix, label, obj_position = feat_read_from_pkl(args.data)

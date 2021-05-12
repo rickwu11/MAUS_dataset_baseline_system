@@ -15,7 +15,12 @@ def parse_files(data_path = './data/'):
     infiniti_data_p = []
     pixart = None
     pixart_data = []
-    for case_file in sorted(os.listdir(data_path)):
+
+    sub_id = ["002", "003", "004", "005", "006", "008", "010", "011", "012", "013", "014", \
+    "015", "016", "017", "018", "019", "020", "021", "022", "023", "024", "025"]
+
+    # for case_file in sorted(os.listdir(data_path)):
+    for case_file in sub_id:
         print(case_file)
         infiniti_part_e = pd.read_csv( data_path + case_file + '/inf_ecg.csv', 
                                 header=0, 
