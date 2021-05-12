@@ -88,19 +88,18 @@ def feature_extraction(dir_name = "./MAUS/Data/IBI_sequence/"):
     feat_pix = []
     label = []
     obj_position = []
+    sub_id = ["002", "003", "004", "005", "006", "008", "010", "011", "012", \
+    "015", "016", "017", "018", "019", "021", "022", "023", "024", "025"]
 
-
-    for case_file in sorted(os.listdir(dir_name)):
+    # for case_file in sorted(os.listdir(dir_name)):
+    for case_file in sub_id:
         print(case_file)
         for trial in range(18):
             seg_idx = trial%3 + 1
             trial_idx = trial//3 + 1
-            # IBI = pd.read_csv(dir_name + case_file + "/trial_" + str(trial) + ".csv")
             IBI = pd.read_csv(dir_name + case_file + "/trial_" + str(trial_idx) + "_" + str(seg_idx) + ".csv")
             RRI = np.asarray(IBI)[:,0]
             PPI_inf = np.asarray(IBI)[:,1]
-            PPI = np.asarray(IBI)[:,2]
-            # outlier_label = np.asarray(IBI)[:,3]
 
             ppi_std = np.std(RRI)
 
