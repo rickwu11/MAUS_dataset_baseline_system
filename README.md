@@ -31,27 +31,27 @@ The extracted features were provided for classification under the folder: ./feat
 ### Peak detection, extract inter-beat intervals (IBI)
     python3 peak_detection.py --src_data <SrcDir> --dst_data <DstDir> --single_sub <Single_sub> --sub_id <ID> --rest_data <ExtractRest>
     
-`<SrcDir>`: Raw signal datapath; Default: ./MAUC/Data/Raw_data
+`<SrcDir>`: (str) Raw signal datapath; Default: ./MAUC/Data/Raw_data
 
-`<DstDir>`: Extract IBI sequence datapath; Default: ./MAUC/Data/
+`<DstDir>`: (str) Extract IBI sequence datapath; Default: ./MAUC/Data/
 
-`<Single_sub>`: Extract IBI sequence from single subject; Default: True
+`<Single_sub>`: (bool) Extract IBI sequence from single subject; Default: True
 
-`<ID>`: ID of the single subject; Default: 002
+`<ID>`: (str) ID of the single subject; Default: 002
 
-`<ExtractRest>`: Extract resting IBI sequence; Default: False
+`<ExtractRest>`: (bool) Extract resting IBI sequence; Default: False
 
 ### HRV features extraction
     python3 HRV_feature_extraction.py --data <IbiDir>
 
-`<IbiDir>`: Inter-beat Intervals (IBI) sequence path; Default: ./MAUC/Data/IBI_sequence/
+`<IbiDir>`: (str) Inter-beat Intervals (IBI) sequence path; Default: ./MAUC/Data/IBI_sequence/
     
 ### Classification
     python3 classification.py --data <FeatureDir> --mode <ValidationType>
     
-`<FeatureDir>`: feature data path; Default: ./feature_data
+`<FeatureDir>`: (str) feature data path; Default: ./feature_data
 
-`<ValidationType>`: validation type; Default: LOSO
+`<ValidationType>`: (str) validation type; Default: LOSO
 - LOSO: leave-one-subject-out cross validation
 - Mixed: mixed-subject 5-fold cross validation
     
