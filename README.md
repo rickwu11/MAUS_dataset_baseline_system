@@ -28,7 +28,13 @@ Extract the .zip file under this folder.
 ## Baseline system running
 The extracted features were provided for classification under the folder: ./feature_data
 ### Peak detection, extract inter-beat intervals (IBI)
-    python3 peak_detection.py
+    python3 peak_detection.py --src_data <SrcDir> --dst_data <DstDir> --single_sub <Single_sub> --sub_id <ID> --rest_data <ExtractRest>
+    
+`<SrcDir>`: Raw signal datapath; Default: ./MAUC/Data/Raw_data
+`<DstDir>`: Extract IBI sequence datapath; Default: ./MAUC/Data/
+`<Single_sub>`: Extract IBI sequence from single subject; Default: True
+`<ID>`: ID of the single subject; Default: 002
+`<ExtractRest>`: Extract resting IBI sequence; Default: False
 
 ### HRV features extraction
     python3 HRV_feature_extraction.py --data <IbiDir>
