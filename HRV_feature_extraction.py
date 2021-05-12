@@ -93,6 +93,8 @@ def feature_extraction(dir_name = "./MAUS/Data/IBI_sequence/"):
 
     # for case_file in sorted(os.listdir(dir_name)):
     for case_file in sub_id:
+        if case_file == "013" or case_file == "014" or case_file == "020":
+            continue
         print(case_file)
         for trial in range(18):
             seg_idx = trial%3 + 1
@@ -100,6 +102,7 @@ def feature_extraction(dir_name = "./MAUS/Data/IBI_sequence/"):
             IBI = pd.read_csv(dir_name + case_file + "/trial_" + str(trial_idx) + "_" + str(seg_idx) + ".csv")
             RRI = np.asarray(IBI)[:,0]
             PPI_inf = np.asarray(IBI)[:,1]
+            PPI = np.asarray(IBI)[:,2]
 
             ppi_std = np.std(RRI)
 
